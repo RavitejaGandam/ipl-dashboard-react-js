@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import MatchDetailCard from "../components/MatchDetailCard";
 //import MAtchSmallCard from "../components/MAtchSmallCard";
 import MatchesSmallCard from "../components/MatchesSmallCard";
-
+import "./TeamPage.scss";
 function TeamPage() {
   let [team, setTeam] = useState(null);
   let { teamName } = useParams();
@@ -22,7 +22,7 @@ function TeamPage() {
     return <h1>Oops!Team Not Found..</h1>;
   }
   return (
-    <div>
+    <div className="TeamPage">
       {/* {team ? (
         <div>
           <h2>teamname : {team.teamName}</h2>

@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import MatchPage from './pages/MatchPage';
 import TeamPage from './pages/TeamPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
