@@ -1,6 +1,8 @@
 .MatchDetailCard{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    margin-bottom: 25px;
     .date,.venue,.result{
         margin-top: 10px;
     }
