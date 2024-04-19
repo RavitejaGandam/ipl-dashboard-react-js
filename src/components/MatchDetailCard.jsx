@@ -24,6 +24,11 @@ function MatchDetailCard({ match, teamName }) {
         <h3>Second Innings</h3>
         <p>{match.team2}</p>
         <h3>Man of the match</h3>
+        <p>{match.playerOfMatch}</p>
+        <h3>Umpires</h3>
+        <p>
+          {match.umpire1},{match.umpire2}
+        </p>
       </div>
     </div>
   );
