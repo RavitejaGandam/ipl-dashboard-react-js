@@ -32,15 +32,26 @@ function TeamPage() {
       ) : (
         <div>Loading...</div>
       )} */}
-      <h1>{team.teamName}</h1>
-      <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
-      {team.matches.slice(1).map((match) => (
-        <MatchesSmallCard
-          key={match._id}
-          teamName={team.teamName}
-          match={match}
-        />
-      ))}
+      <div className="TeamName">
+        <h1>{team.teamName}</h1>
+      </div>
+      <div className="win-loss">Wins/loss</div>
+      <div className="matchdetail">
+        <h3>Latest Matches</h3>
+        <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
+      </div>
+      <div className="matchsmall">
+        {team.matches.slice(1).map((match) => (
+          <MatchesSmallCard
+            key={match._id}
+            teamName={team.teamName}
+            match={match}
+          />
+        ))}
+        <div className="more">
+          <a href="#">More</a>
+        </div>
+      </div>
     </div>
   );
 }

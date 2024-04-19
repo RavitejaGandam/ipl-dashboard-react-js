@@ -2,4 +2,21 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+.TeamName{
+    grid-column: span 3;
+    justify-self: start;
+    align-self: end;
+}
+.TeamName h1{
+    font-size: 4rem;
+}
+.matchdetail{
+    grid-column: span 4;
+}
+.win-loss{
+    justify-self: center;
+}
 }

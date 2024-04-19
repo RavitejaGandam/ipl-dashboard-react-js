@@ -1,0 +1,14 @@
+.MatchDetailCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .date,.venue,.result{
+        margin-top: 10px;
+    }
+    .innings{
+        text-align: right;
+        & > p{
+            margin-bottom: 20px;
+        }
+
+    }
+}
