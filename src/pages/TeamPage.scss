@@ -8,15 +8,18 @@
 .TeamName{
     grid-column: span 3;
     justify-self: start;
-    align-self: end;
+    align-self:center;
 }
 .TeamName h1{
+    align-self: flex-start;
     font-size: 4rem;
 }
 .matchdetail{
+    align-self:flex-start;
     grid-column: span 4;
 }
 .win-loss{
+    padding: 30px;
     justify-self: center;
     text-align: center;
 }
