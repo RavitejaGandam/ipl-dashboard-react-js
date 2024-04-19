@@ -43,9 +43,9 @@ function TeamPage() {
             {
               title: "Losses",
               value: team.totalMatches - team.totalWins,
-              color: "#a34d5d",
+              color: "#5cbd89",
             },
-            { title: "Wins", value: team.totalWins, color: "#4da375" },
+            { title: "Wins", value: team.totalWins, color: "#ec3c5c" },
           ]}
         />
       </div>
