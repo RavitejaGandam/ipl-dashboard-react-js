@@ -4,6 +4,7 @@ import MatchDetailCard from "../components/MatchDetailCard";
 //import MAtchSmallCard from "../components/MAtchSmallCard";
 import MatchesSmallCard from "../components/MatchesSmallCard";
 import "./TeamPage.scss";
+import { PieChart } from "react-minimal-pie-chart";
 function TeamPage() {
   let [team, setTeam] = useState(null);
   let { teamName } = useParams();
@@ -35,7 +36,19 @@ function TeamPage() {
       <div className="TeamName">
         <h1>{team.teamName}</h1>
       </div>
-      <div className="win-loss">Wins/loss</div>
+      <div className="win-loss">
+        Wins/loss
+        <PieChart
+          data={[
+            {
+              title: "Losses",
+              value: team.totalMatches - team.totalWins,
+              color: "#a34d5d",
+            },
+            { title: "Wins", value: team.totalWins, color: "#4da375" },
+          ]}
+        />
+      </div>
       <div className="matchdetail">
         <h3>Latest Matches</h3>
         <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
@@ -50,7 +63,7 @@ function TeamPage() {
             />
           ))}
           <div className="more">
-            <a href="#">More</a>
+            <a href="#">More </a>
           </div>
         </div>
       </div>
