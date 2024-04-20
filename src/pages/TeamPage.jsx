@@ -57,7 +57,7 @@ function TeamPage() {
         <div className="matchsmall">
           {team.matches.slice(1).map((match) => (
             <MatchesSmallCard
-              key={match._id}
+              key={match.id}
               teamName={team.teamName}
               match={match}
             />
