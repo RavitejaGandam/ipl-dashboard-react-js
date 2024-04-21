@@ -4,7 +4,7 @@ import TeamTile from './components/TeamTile';
 import HomePage from './pages/HomePage';
 import MatchPage from './pages/MatchPage';
 import TeamPage from './pages/TeamPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
