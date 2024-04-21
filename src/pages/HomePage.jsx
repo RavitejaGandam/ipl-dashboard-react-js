@@ -5,7 +5,9 @@ function HomePage() {
   let [teams, setTeams] = useState([]);
   useEffect(() => {
     let fetchAllTeams = async () => {
-      const response = await fetch(`http://localhost:8080/team`);
+      const response = await fetch(
+        `${process.env.REACT_APP_API_ROOT_URL}/team`
+      );
       let data = await response.json();
       setTeams(data);
     };
