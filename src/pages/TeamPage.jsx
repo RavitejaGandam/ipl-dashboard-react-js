@@ -10,7 +10,9 @@ function TeamPage() {
   let { teamName } = useParams();
   useEffect(() => {
     let fetchMatches = async () => {
-      let res = await fetch(`http://localhost:8080/team/${teamName}`);
+      let res = await fetch(
+        `${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}`
+      );
       if (res.status !== 200) throw new Error("Failed to load team");
       let data = await res.json();
       setTeam(data);

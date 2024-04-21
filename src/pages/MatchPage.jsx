@@ -10,7 +10,7 @@ function MatchPage() {
   useEffect(() => {
     let fetchMatches = async () => {
       let response = await fetch(
-        `http://localhost:8080/team/${teamName}/matches?year=${year}`
+        `${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}/matches?year=${year}`
       );
       if (!response.ok) throw new Error("HTTP-Error: " + response.status);
       let data = await response.json();
