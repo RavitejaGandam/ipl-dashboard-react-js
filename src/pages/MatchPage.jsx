@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import MatchDetailCard from "../components/MatchDetailCard";
 import "./MatchPage.scss";
 import YearSelector from "./YearSelector";
+import { Link } from "react-router-dom";
 
 function MatchPage() {
   let [matches, setMatches] = useState([]);
@@ -26,6 +27,9 @@ function MatchPage() {
         <YearSelector teamName={teamName} />
       </div>
       <div>
+        <div className="gobacktohomepage">
+          <Link to="/homepage">Go Back To Home Page</Link>
+        </div>
         <h1 className="page-heading">
           {teamName} matches in {year}
         </h1>

@@ -38,6 +38,9 @@ function TeamPage() {
       <div className="TeamName">
         <h1>{team.teamName}</h1>
       </div>
+      <div className="gobacktohomepage">
+        <Link to="/homepage">Go Back To Home Page</Link>
+      </div>
       <div className="win-loss">
         Wins/loss
         <PieChart
